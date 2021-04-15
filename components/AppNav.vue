@@ -1,9 +1,6 @@
 <template>
   <header>
-      <section class="logo">
        <h1>Farm Boy Industries</h1>
-    </section>
-
     <nav>
       <ul>
         <li>
