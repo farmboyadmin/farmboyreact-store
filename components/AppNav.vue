@@ -1,6 +1,9 @@
 <template>
   <header>
-    <h1>Farm Boy Industries</h1>
+      <section class="logo">
+       <h1>Farm Boy Industries</h1>
+    </section>
+
     <nav>
       <ul>
         <li>
@@ -93,5 +96,13 @@ nav {
     border-left: none !important;
     border-right: none !important;
   }
+
 }
+  .logo {
+    background-image: url(./logo.png);
+    position:absolute;
+    left:0;
+    top:0;
+  }
+
 </style>
