@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Skyline Ivy</h1>
+    <h1>Farm Boy Industries</h1>
     <nav>
       <ul>
         <li>
@@ -8,12 +8,6 @@
         </li>
         <li>
           <nuxt-link to="/all">All</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/women">Women</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/men">Men</nuxt-link>
         </li>
         <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
