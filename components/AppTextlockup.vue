@@ -6,7 +6,7 @@
       </slot>
     </div>
     <div class="collection">
-      <slot name="collection">Collection</slot>
+      <slot name="collection"></slot>
     </div>
 
   </div>
