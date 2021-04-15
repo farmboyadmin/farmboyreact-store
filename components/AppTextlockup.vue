@@ -2,7 +2,7 @@
   <div class="textlockup">
     <div class="img">
       <slot name="img">
-        <img src="/main.jpg" alt="farm" />
+        <img src="/callout.jpg" alt="farm" />
       </slot>
     </div>
     <div class="collection">
