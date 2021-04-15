@@ -1,6 +1,7 @@
 <template>
   <header>
-    <h1>Farm Boy Industries</h1>
+    <div class="logo">
+    </div>
     <nav>
       <ul>
         <li>
@@ -36,7 +37,9 @@ header {
   align-items: center;
   padding: 40px 40px 0;
 }
-
+.logo {
+  background-image: url(./logo.png);
+}
 nav {
   display: flex;
   width: 80vw;

@@ -1,9 +1,8 @@
 <template>
-  <div class="textlockup">
-    <div class="img">
-      <slot name="img">
-        <img src="/main.jpg" alt="farm" />
-      </slot>
+  <div class="callout">
+      <h2>"Hope Farm School is a boarding school near Stockholm, Wisconsin with the mission of discipling, training, and educating young men in the spirit of Jesus Christ, all in a farm setting.
+           Through Farmboy Industries we teach our students business principles, and make the learning real by selling our products. Proceeds support our school."</h2>
+      <p></p>
     </div>
     <div class="collection">
       <slot name="collection"></slot>
@@ -29,6 +28,22 @@ export default {};
     color: #efefef;
     text-transform: uppercase;
   }
+  }
+  .callout {
+    width: 100%;
+    height: 280px;
+    background: url("/callout.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    h2 {
+      padding: 0 30px;
+      text-align: center;
+    }
+
   .sale {
     grid-area: 2 / 2 / 3 / 4;
     font-size: 6.5vmin;
