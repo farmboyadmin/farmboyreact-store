@@ -13,8 +13,6 @@ import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
   components: {
-    AppTextlockup,
-    AppSalesBoxes,
     AppFeaturedProducts
   }
 };
