@@ -1,22 +1,11 @@
 <template>
   <footer>
     <section class="callout">
-      <h2>"The surprising styles of Skyline Ivy are advanced for all seasons."</h2>
-      <p>Hansel Andersen</p>
+      <h2>"Hope Farm School is a boarding school near Stockholm, Wisconsin with the mission of discipling, training, and educating young men in the spirit of Jesus Christ, all in a farm setting.
+           Through Farmboy Industries we teach our students business principles, and make the learning real by selling our products. Proceeds support our school."</h2>
+      <p></p>
     </section>
     <app-footer-links />
-    <div class="sarahstuff">
-      <p>
-        This project is
-        <a href="https://github.com/sdras/ecommerce-netlify">open source on github</a>,
-        hosted with
-        <a href="https://bit.ly/2G29YwK">Netlify</a>, and made with love by Sarah Drasner,
-        <a
-          href="https://twitter.com/sarah_edo"
-        >@sarah_edo (twitter)</a> &
-        <a href="https://github.com/sdras">@sdras (github)</a>
-      </p>
-    </div>
   </footer>
 </template>
 
