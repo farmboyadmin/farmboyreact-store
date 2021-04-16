@@ -19,8 +19,6 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  width: 80%;
-  margin-left: 10%;
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -43,7 +41,7 @@ input {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 40px;
+  width: 30px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
@@ -65,6 +63,10 @@ input {
 /* Twitter */
 .fa-twitter {
   background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
   color: white;
 }
 </style>
