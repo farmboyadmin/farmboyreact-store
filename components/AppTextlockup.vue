@@ -16,7 +16,7 @@ export default {};
 <style lang="scss" scoped>
 .callout {
   width: 100%;
-  height: 50%;
+  height: 80%;
   background: url("/callout.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
