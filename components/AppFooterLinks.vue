@@ -8,13 +8,11 @@
     </ul>
     <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <div hidden aria-hidden="true">
-  <div class="container" >
       <label>
       <h2>Subscribe to our Newsletter</h2></label>
     <input type="text" placeholder="Name" name="name" required>
     <input type="text" placeholder="Email address" name="mail" required>
     <input type="submit" value="Subscribe">
-  </div>
     </form>
   </section>
 </template>
