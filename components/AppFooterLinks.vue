@@ -17,8 +17,6 @@
       <div class="newsletter">
             <label for="email">Your email address</label>
              <input type="email" name="email" placeholder="Email"  id="email" required />
-      </div>
-      <div class="newsletter">
               <button type="submit">Subscribe</button>
       </div>
     </form>
