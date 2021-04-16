@@ -1,7 +1,7 @@
 <template>
   <header>
     <link rel="shortcut icon" type="image/png" href="/static/log.png"/>
-    <h1></h1>
+    <section class="logo"></section>
     <nav>
       <ul>
         <li>
@@ -90,6 +90,22 @@ nav {
   padding: 6px 10px;
   font-weight: bold;
 }
+.logo {
+  width: 100%;
+  height: 280px;
+  background: url("/logo.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  h2 {
+    padding: 0 30px;
+    text-align: center;
+  }
+}
+
 
 @media screen and (max-width: 850px) {
   h1 {
