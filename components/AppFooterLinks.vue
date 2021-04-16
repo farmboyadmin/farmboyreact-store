@@ -7,8 +7,19 @@
       <a href="#" class="fa fa-instagram"></a>
     </ul>
     <ul>
-      <h4>Newsletter:</h4>
-      <input type="text" />
+    <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <div hidden aria-hidden="true">
+        <label>
+          Newsletter :
+          <input name="bot-field" />
+        </label>
+      </div>
+      <label for="email">Your email address</label>
+      <div>
+        <input type="email" name="email" placeholder="Email"  id="email" required />
+        <button type="submit">Subscribe</button>
+      </div>
+    </form>
     </ul>
   </section>
 </template>
