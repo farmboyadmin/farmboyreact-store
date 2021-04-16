@@ -19,6 +19,8 @@ export default {};
 
 <style lang="scss" scoped>
 section {
+  width: 80%;
+  margin-left: 10%;
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
