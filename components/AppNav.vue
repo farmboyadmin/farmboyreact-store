@@ -1,7 +1,7 @@
 <template>
   <header>
     <link rel="shortcut icon" type="image/png" href="/static/log.png"/>
-    <h1>Farm Boy Industries</h1>
+    <h1></h1>
     <nav>
       <ul>
         <li>
@@ -94,6 +94,7 @@ nav {
 @media screen and (max-width: 850px) {
   h1 {
     margin: 0;
+    background: url("/logo.jpg") center center no-repeat;
   }
   nav ul li {
     padding: 0 5px !important;
