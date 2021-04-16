@@ -43,7 +43,7 @@ input {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 60px;
+  width: 70px;
   text-align: center;
   text-decoration: none;
   border-radius: 100%;
