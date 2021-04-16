@@ -13,11 +13,12 @@
           <input name="bot-field" />
         </label>
       </div>
-           <label class="newsletter">Newsletter : </label>
       <div class="newsletter">
+            <label class="newsletter">Newsletter : </label>
             <label for="email">Your email address</label>
-             <input type="email" name="email" placeholder="Email"  id="email" required />
-              <button type="submit">Subscribe</button>
+            <input type="email" name="email" placeholder="Email"  id="email" required />
+             <span class="newsletter">
+            <button type="submit">Subscribe</button></span>
       </div>
     </form>
   </section>
