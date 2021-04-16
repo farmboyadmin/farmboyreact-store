@@ -13,12 +13,12 @@
           <input name="bot-field" />
         </label>
       </div>
-           <label>Newsletter : </label>
-      <div>
+           <label class="newsletter">Newsletter : </label>
+      <div class="newsletter">
             <label for="email">Your email address</label>
              <input type="email" name="email" placeholder="Email"  id="email" required />
       </div>
-      <div>
+      <div class="newsletter">
               <button type="submit">Subscribe</button>
       </div>
     </form>
@@ -52,6 +52,11 @@ input {
     padding: 40px !important;
   }
 }
+
+.newsletter {
+    display: inline;
+}
+
 .fa {
   padding: 20px;
   font-size: 30px;
