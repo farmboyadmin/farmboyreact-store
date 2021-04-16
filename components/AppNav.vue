@@ -92,7 +92,7 @@ nav {
 }
 .logo {
   width: 100%;
-  height: 280px;
+  height: 40%;
   background: url("/logo.jpg") center center no-repeat;
   background-size: cover;
   display: flex;

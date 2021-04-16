@@ -1,13 +1,6 @@
 <template>
   <section>
     <ul>
-      <li>About</li>
-      <li>Company</li>
-      <li>Locations</li>
-      <li>Contact</li>
-      <li>Hours</li>
-    </ul>
-    <ul>
       <li>Twitter</li>
       <li>Facebook</li>
       <li>Instagram</li>

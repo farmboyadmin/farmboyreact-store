@@ -5,7 +5,7 @@
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
-        <img :src="`/products/${product.img}`" />
+        <img :src="`/products/${product.img}`" class="responsive" />
         <h3>{{ product.name }}</h3>
         <h4>{{ product.price | dollar }}</h4>
         <NuxtLink :to="`/product/${product.id}`">
@@ -45,7 +45,11 @@ section {
     text-align: center;
   }
 }
-
+.responsive {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  }
 h4 {
   color: #d96528;
   margin: 10px 0;
