@@ -8,18 +8,13 @@
     </ul>
     <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <div hidden aria-hidden="true">
-        <label>
-          Newsletter :
-          <input name="bot-field" />
-        </label>
-      </div>
-      <label> Newsletter : </label>
-      <div class="newsletter">
-            <label for="email">Your email address</label>
-            <input type="email" name="email" placeholder="Email"  id="email" required />
-             <span class="newsletter">
-            <button type="submit">Subscribe</button></span>
-      </div>
+  <div class="container" >
+      <label>
+      <h2>Subscribe to our Newsletter</h2></label>
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <input type="submit" value="Subscribe">
+  </div>
     </form>
   </section>
 </template>
@@ -52,8 +47,36 @@ input {
   }
 }
 
-.newsletter {
-    display: inline;
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
 }
 
 .fa {
