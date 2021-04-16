@@ -13,7 +13,7 @@
           <input name="bot-field" />
         </label>
       </div>
-      <label class="newsletter">Newsletter : </label>
+      <label> Newsletter : </label>
       <div class="newsletter">
             <label for="email">Your email address</label>
             <input type="email" name="email" placeholder="Email"  id="email" required />
@@ -34,7 +34,7 @@ section {
   margin-left: 10%;
   padding: 40px 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 ul {
