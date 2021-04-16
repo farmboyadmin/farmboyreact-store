@@ -7,6 +7,8 @@
       <a href="#" class="fa fa-instagram"></a>
     </ul>
     <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+     <input type="hidden" name="form-name" value="newsletter" />
+              <p>
   <div class="container" >
       <label>
       <h2>Subscribe to our Newsletter</h2></label>
