@@ -37,7 +37,6 @@ section {
   margin-left: 10%;
   padding: 40px 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 ul {
