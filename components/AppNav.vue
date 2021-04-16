@@ -7,8 +7,14 @@
           <nuxt-link exact to="/">Home</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/all">All</nuxt-link>
+          <nuxt-link to="/all">Products</nuxt-link>
         </li>
+                <li>
+                  <nuxt-link to="/aboutus">About</nuxt-link>
+                </li>
+                <li>
+                 <nuxt-link to="/contactus">Contact Us</nuxt-link>
+                </li>
         <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
           <nuxt-link to="/cart">Cart</nuxt-link>

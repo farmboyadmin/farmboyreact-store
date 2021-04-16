@@ -1,10 +1,9 @@
 [
   {
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e33",
-    "color": "Goldenrod",
     "description": "The hogs are raised by our students in sunshine and open air. They’re fed leftover food from our kitchen, vegetables from our gardens, and grain from our fields. We even play with them! All pork will be processed in a USDA inspected facility.",
     "gender": "Male",
-    "name": "HUMANELY RAISED HOGS",
+    "name": "Humanely Raised Hogs",
     "review": "productize virtual markets",
     "starrating": 5,
     "price": 3.75,
@@ -12,7 +11,6 @@
   },
   {
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e32",
-    "color": "Goldenrod",
     "description": "Organic Eggs",
     "gender": "Male",
     "name": "Organic Eggs",

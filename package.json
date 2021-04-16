@@ -1,8 +1,8 @@
 {
-  "name": "ecommerce-netlify",
+  "name": "Farm Boy Industries",
   "version": "1.0.0",
-  "description": "A serverless function to process stripe payments with Nuxt, Netlify, and Lambda",
-  "author": "sdras",
+  "description": "Simple project for seeing all products",
+  "author": "davidsam",
   "private": true,
   "scripts": {
     "dev": "nuxt",
