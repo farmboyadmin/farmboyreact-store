@@ -1,11 +1,10 @@
 <template>
   <section>
-    <ul>
-      <li>Twitter</li>
-      <li>Facebook</li>
-      <li>Instagram</li>
-      <li>LinkedIn</li>
-    </ul>
+ <div>
+     <mdb-btn tag="a" size="lg" floating class="btn-fb" icon="facebook-f" fab></mdb-btn>
+     <mdb-btn tag="a" size="lg" floating class="btn-tw" icon="twitter" fab></mdb-btn>
+     <mdb-btn tag="a" size="lg" floating class="btn-ins" icon="instagram" fab></mdb-btn>
+ </div>
     <ul>
       <h4>Newsletter:</h4>
       <input type="text" />
@@ -14,7 +13,13 @@
 </template>
 
 <script>
-export default {};
+  import { mdbBtn } from 'mdbvue';
+  export default {
+    name: 'ButtonsSocial',
+    components: {
+      mdbBtn
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
