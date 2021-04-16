@@ -1,10 +1,11 @@
 <template>
   <section>
- <div>
-     <mdb-btn tag="a" size="lg" floating class="btn-fb" icon="facebook-f" fab></mdb-btn>
-     <mdb-btn tag="a" size="lg" floating class="btn-tw" icon="twitter" fab></mdb-btn>
-     <mdb-btn tag="a" size="lg" floating class="btn-ins" icon="instagram" fab></mdb-btn>
- </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <ul>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </ul>
     <ul>
       <h4>Newsletter:</h4>
       <input type="text" />
@@ -13,13 +14,7 @@
 </template>
 
 <script>
-  import { mdbBtn } from 'mdbvue';
-  export default {
-    name: 'ButtonsSocial',
-    components: {
-      mdbBtn
-    }
-  }
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -44,5 +39,32 @@ input {
   section {
     padding: 40px !important;
   }
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
 </style>
