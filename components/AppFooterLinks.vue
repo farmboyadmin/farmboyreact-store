@@ -43,9 +43,10 @@ input {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 30px;
+  width: 40px;
   text-align: center;
   text-decoration: none;
+  border-radius: 50%;
 }
 
 /* Add a hover effect if you want */
