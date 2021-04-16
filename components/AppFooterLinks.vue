@@ -6,7 +6,6 @@
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a>
     </ul>
-    <ul>
     <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <div hidden aria-hidden="true">
         <label>
@@ -23,7 +22,6 @@
               <button type="submit">Subscribe</button>
       </div>
     </form>
-    </ul>
   </section>
 </template>
 
@@ -37,6 +35,7 @@ section {
   margin-left: 10%;
   padding: 40px 0;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 ul {
