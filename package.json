@@ -1,7 +1,7 @@
 {
-  "name": "Farm Boy Industries",
+  "name": "farmboy-industries",
   "version": "1.0.0",
-  "description": "Simple project for seeing all products",
+  "description": "Products for purchase available",
   "author": "davidsam",
   "private": true,
   "scripts": {
