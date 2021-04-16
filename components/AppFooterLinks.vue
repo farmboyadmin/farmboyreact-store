@@ -46,7 +46,7 @@ input {
   width: 30px;
   text-align: center;
   text-decoration: none;
-  border-radius: 100%;
+  border-radius: 200%;
 }
 
 /* Add a hover effect if you want */
