@@ -1,5 +1,6 @@
 <template>
   <header>
+    <link rel="shortcut icon" type="image/png" href="/static/log.png"/>
     <h1>Farm Boy Industries</h1>
     <nav>
       <ul>
