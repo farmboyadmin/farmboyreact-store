@@ -1,38 +1,47 @@
 <template>
+  <section>
 <form name="contact" method="POST" data-netlify="true">
      <input type="hidden" name="form-name" value="contact" />
-              <p>
- <div class="container" >
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" />
-      <label for="email">Email</label>
-      <input type="text" id="email" name="email" />
-      <label for="message">Message</label>
-      <textarea id="message" name="message"></textarea>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-    </div>
-  </form>
+  <div class="container" >
+      <label>
+      <h2>Contact Us</h2></label>
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label for="message">Message</label>
+    <textarea id="message" name="message"></textarea>
+    <input type="submit" value="Send">
+  </div>
+    </form>
+  </section>
 </template>
 
 <script>
-
-
-export default {
-};
+export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+section {
+  width: 80%;
+  margin-left: 10%;
+  padding: 40px 0;
 
-  body {
-    font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input {
+  width: 100%;
+}
+
+@media screen and (min-width: 850px) {
+  section {
+    padding: 40px !important;
   }
-  label {
-    display: block;
-    margin-bottom: .2em;
-  }
+}
+
 /* Add some padding and a grey background color to containers */
 .container {
   padding: 20px;
@@ -47,6 +56,7 @@ input[type=text], input[type=submit] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+
 }
 
 /* Add margins to the checkbox */
@@ -63,5 +73,37 @@ input[type=submit] {
 
 input[type=submit]:hover {
   opacity: 0.8;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
 </style>

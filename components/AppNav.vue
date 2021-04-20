@@ -1,14 +1,11 @@
 <template>
   <header>
     <link rel="shortcut icon" type="image/png" href="/static/log.png"/>
-    <section class="logo"></section>
+    <logo></logo>
     <nav>
       <ul>
         <li>
           <nuxt-link exact to="/">Home</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/all">Products</nuxt-link>
         </li>
                 <li>
                   <nuxt-link to="/aboutus">About</nuxt-link>
@@ -16,12 +13,17 @@
                 <li>
                  <nuxt-link to="/contactus">Contact Us</nuxt-link>
                 </li>
-        <li>
+                 <li>
+                 <nuxt-link to="/newsletter">Newsletter</nuxt-link>
+                </li>
+       <!-- <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
           <nuxt-link to="/cart">Cart</nuxt-link>
         </li>
+        -->
       </ul>
     </nav>
+    <section class="banner"></section>
   </header>
 </template>
 
@@ -72,8 +74,17 @@ nav {
       }
     }
   }
+ 
 }
+ logo {
+  width: 100%;
+  height: 156px;
+  background: url("/logo.jpg") ;
+  background-repeat: no-repeat;
+    align-items: center;
+      justify-content: center;
 
+}
 .carttotal {
   position: absolute;
   border-radius: 1000px;
@@ -90,10 +101,10 @@ nav {
   padding: 6px 10px;
   font-weight: bold;
 }
-.logo {
+.banner {
   width: 100%;
-  height: 200px;
-  background: url("/logo.jpg") center center no-repeat;
+  height: 260px;
+  background: url("/callout.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;

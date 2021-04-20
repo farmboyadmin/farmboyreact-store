@@ -1,11 +1,16 @@
 <template>
   <section>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <ul>
-      <a href="https://www.facebook.com/hopefarmschoolwis" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="https://www.instagram.com/hopefarmschool/" class="fa fa-instagram"></a>
-    </ul>
+      <div class="container" >
+    <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+     <input type="hidden" name="form-name" value="newsletter" />
+      <label>
+      <h2>Newsletter from Hope Farm School</h2></label>
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <input type="submit" value="Sign Up">
+    </form>
+      </div>
+
   </section>
 </template>
 
@@ -15,9 +20,10 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  width: 100%;
-  margin-left: 40%;
+  width: 80%;
+  margin-left: 10%;
   padding: 40px 0;
+
 }
 
 ul {

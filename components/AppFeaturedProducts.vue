@@ -1,13 +1,14 @@
 <template>
   <section>
     <h2>
-      <span>Featured Products</span>
+      <span>Our Produce</span>
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
         <img :src="`/products/${product.img}`" class="responsive" />
         <h3>{{ product.name }}</h3>
-        <h4>{{ product.price | dollar }}</h4>
+        <h4>{{ product.price | dollar}} </h4>
+        <p>{{ product.unit }} </p>
         <NuxtLink :to="`/product/${product.id}`">
           <button class="multi-item">View Item ></button>
         </NuxtLink>

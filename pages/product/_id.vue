@@ -13,7 +13,8 @@
           active-color="#000"
           style="margin: 5px 0"
         ></star-rating>
-        <h4 class="price">{{ product.price | dollar }}</h4>
+        <h4 class="price">{{ product.price | dollar }}  {{ product.unit }} </h4>
+       
         <p>{{ product.description }}</p>
         <div class="product-options">
           <div class="quantity">
@@ -29,12 +30,6 @@
           </div>
         </div>
         <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
-        <p>
-          Available in additional colors:
-          <strong>
-            <span :style="`color: ${product.color}`">{{ product.color }}</span>
-          </strong>
-        </p>
         <p>
           <button class="button purchase" @click="cartAdd">Add to Cart</button>
         </p>
