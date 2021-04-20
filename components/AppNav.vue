@@ -77,12 +77,15 @@ nav {
  
 }
  logo {
-  display: flex;
-  width: 80vw;
+  width: 50vw;
   height: 156px;
-  background: url("/logo.jpg") ;
   background-repeat: no-repeat;
+  background: url("/logo.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .carttotal {
   position: absolute;
