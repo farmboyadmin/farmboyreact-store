@@ -77,7 +77,7 @@ nav {
  
 } logo {
   width: 50vw;
-  height: 50vh;
+  height: 30vh;
   background-repeat: no-repeat;
   background: url("/farmboylogo.png") center center no-repeat;
   background-size: cover;
@@ -104,7 +104,7 @@ nav {
 }
 .banner {
   width: 80vw;
-  height: 360px;
+  height: 20vw;
   background: url("/callout.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
@@ -115,6 +115,8 @@ nav {
   h2 {
     padding: 0 30px;
     text-align: center;
+    width: 80vw;
+    height: 20vw;
   }
 }
 
