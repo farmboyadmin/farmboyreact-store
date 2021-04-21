@@ -1,8 +1,8 @@
 <template>
   <footer>
     <section class="callout">
-      <p>Hope Farm School is a boarding school near Stockholm, Wisconsin with the mission of discipling, training, and educating young men in the spirit of Jesus Christ, all in a farm setting.
-           Through Farmboy Industries we teach our students business principles, and make the learning real by selling our products. Proceeds support our school.</p>
+      <h2>Hope Farm School is a boarding school near Stockholm, Wisconsin with the mission of discipling, training, and educating young men in the spirit of Jesus Christ, all in a farm setting.
+           Through Farmboy Industries we teach our students business principles, and make the learning real by selling our products. Proceeds support our school.</h2>
     </section>
     <app-footer-links />
   </footer>
@@ -23,8 +23,12 @@ export default {};
   flex-direction: column;
   //color: white;
   h2 {
-    padding: 0 30px;
-    text-align: center;
+    padding: 0 20px;
+    font-size: large;
+    text-align: left;
+    width: 80vw;
+    height: 10vw;
+    font-family: Verdana  ;
   }
 }
 

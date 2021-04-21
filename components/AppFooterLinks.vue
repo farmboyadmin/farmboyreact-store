@@ -15,8 +15,7 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  width: 100%;
-  margin-left: 10%;
+  width: 50vw;
   padding: 40px 0;
 }
 
