@@ -15,13 +15,12 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  width: 50vw;
-  padding: 40px 0;
+  align-items: center;
 }
 
 ul {
   list-style: none;
-  padding-left: 0;
+    align-items: center;
 }
 
 input {
