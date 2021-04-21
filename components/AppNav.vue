@@ -1,6 +1,6 @@
 <template>
   <header>
-    <link rel="shortcut icon" type="image/png" href="/static/log.png"/>
+    <link rel="shortcut icon" type="image/png" href="/static/farmboylogo.png"/>
     <logo></logo>
     <nav>
       <ul>
@@ -75,12 +75,11 @@ nav {
     }
   }
  
-}
- logo {
+} logo {
   width: 50vw;
-  height: 156px;
+  height: 20vw;
   background-repeat: no-repeat;
-  background: url("/logo.jpg") center center no-repeat;
+  background: url("/farmboylogo.png") center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -105,7 +104,7 @@ nav {
 }
 .banner {
   width: 80vw;
-  height: 260px;
+  height: 360px;
   background: url("/callout.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
@@ -123,7 +122,7 @@ nav {
 @media screen and (max-width: 850px) {
   h1 {
     margin: 0;
-    background: url("/logo.jpg") center center no-repeat;
+    background: url("/farmboylog.png") center center no-repeat;
   }
   nav ul li {
     padding: 0 5px !important;
