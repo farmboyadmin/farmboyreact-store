@@ -77,7 +77,7 @@ nav {
  
 } logo {
   width: 50vw;
-  height: 20vw;
+  height: 50vh;
   background-repeat: no-repeat;
   background: url("/farmboylogo.png") center center no-repeat;
   background-size: cover;
