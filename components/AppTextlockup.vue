@@ -1,9 +1,7 @@
 <template>
   <footer>
     <section class="callout">
-      <h2>Hope Farm School is a boarding school near Stockholm, Wisconsin with the mission of discipling, training, and educating young men in the spirit of Jesus Christ, all in a farm setting.
-           Through Farmboy Industries we teach our students business principles, and make the learning real by selling our products. Proceeds support our school.</h2>
-    </section>
+     </section>
     <app-footer-links />
   </footer>
 </template>
