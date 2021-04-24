@@ -24,7 +24,7 @@ ul {
     align-items: center;
         padding-left: 20vw;
                 padding-right: 20vw;
-                width: 105vmin;
+                width: 120vmin;
     
 }
 
