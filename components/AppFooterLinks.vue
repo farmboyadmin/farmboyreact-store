@@ -16,11 +16,13 @@ export default {};
 <style lang="scss" scoped>
 section {
   align-items: center;
+
 }
 
 ul {
   list-style: none;
     align-items: center;
+    
 }
 
 input {
@@ -29,7 +31,7 @@ input {
 
 @media screen and (min-width: 850px) {
   section {
-    padding: 40px !important;
+    padding: 20px !important;
   }
 }
 
@@ -73,6 +75,7 @@ input[type=submit]:hover {
   text-align: center;
   text-decoration: none;
   border-radius: 100%;
+  
 }
 
 /* Add a hover effect if you want */

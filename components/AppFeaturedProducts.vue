@@ -29,12 +29,12 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .featureditems {
-  width: 100%;
-  margin: 20px 0 70px;
+  width: 100vw;
+  margin: 20px 0 20px;
   .item {
     border: 1px solid #eee2dc;
     box-shadow: 0 3px 10px 0px #eee;
