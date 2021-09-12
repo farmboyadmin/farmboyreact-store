@@ -5,7 +5,7 @@
         <img :src="`/products/${product.img}`" />
       </section>
       <section class="product-info">
-        <h1>{{ product.name }}</h1>
+        <h2>{{ product.name }} {{ product.shortDescription }}</h2>
         <h4 class="price">{{ product.unit }} @ {{ product.price | dollar }}  </h4>
        
         <p>{{ product.description }}</p>
