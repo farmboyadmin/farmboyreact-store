@@ -6,7 +6,7 @@
       </section>
       <section class="product-info">
         <h1>{{ product.name }}</h1>
-        <h4 class="price">{{ product.price | dollar }}  for  {{ product.unit }} </h4>
+        <h4 class="price">{{ product.unit }} @ {{ product.price | dollar }}  </h4>
        
         <p>{{ product.description }}</p>
         <p>Order 
