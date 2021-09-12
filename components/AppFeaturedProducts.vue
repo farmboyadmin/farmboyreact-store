@@ -33,8 +33,8 @@ section {
 }
 
 .featureditems {
-  width: 100vw;
-  margin: 20px 0 20px;
+  width: 80vw;
+  margin: 10px 0 10px;
   .item {
     border: 1px solid #eee2dc;
     box-shadow: 0 3px 10px 0px #eee;
@@ -102,7 +102,7 @@ h2 span:after {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 10px;
     grid-row-gap: 0px;
     div {
       padding: 40px 50px;

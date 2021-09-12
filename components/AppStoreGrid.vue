@@ -7,13 +7,6 @@
             <img :src="`/products/${item.img}`" />
           </NuxtLink>
         </div>
-        <star-rating
-          :rating="item.starrating"
-          active-color="#000"
-          :star-size="15"
-          :show-rating="false"
-          style="margin: 5px 0"
-        ></star-rating>
         <h3>{{ item.name }}</h3>
         <h4 class="price">{{ item.price | dollar }}</h4>
         <NuxtLink :to="`product/${item.id}`">
