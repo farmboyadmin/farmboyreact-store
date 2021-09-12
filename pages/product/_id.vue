@@ -6,13 +6,17 @@
       </section>
       <section class="product-info">
         <h1>{{ product.name }}</h1>
-        <h4 class="price">{{ product.price | dollar }}  {{ product.unit }} </h4>
+        <h4 class="price">{{ product.price | dollar }}  for  {{ product.unit }} </h4>
        
         <p>{{ product.description }}</p>
-        <p>
-                <p>
-     <a :href="product.stripeLink">Click to order</a>
+        <p>Order 
+     <a :href="product.stripeLinkWithOutShipping">here</a> to pick up at the farm
       </p>
+                <p>
+Order 
+           <a :href="product.stripeLinkWithShipping">here</a> to be delivered for an additional {{product.shipping}} shipping
+                </p>
+
       </section>
     </section>
     <hr />

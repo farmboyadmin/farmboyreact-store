@@ -1,32 +1,39 @@
 [
   {
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e34",
-    "description": "An assortment of ground beef and special cuts",
-    "name": "10 lbs assorted beef",
+    "description": "Farm Boy Beef, every day the boys give the cattle a fresh slice of pasture.  When they approach the fence, the cattle are waiting impatiently; they know what’s coming!  The new pasture is fenced off, and when the gate opens, they swoop in for a fresh salad lunch.It has taken a while to get to the point where we have not only produced enough beef to feed 20 hungry boys, but also sell to customers.  There are soil samples to collect, hay to cut and bale, fences to put in, and weeds to cut out of the pasture.  All his activity provides hours of meaningful work for the boys, food for their table, and financial support for their school. We are now ready for our first offering:  organic, grass fed and grass finished beef!  We are sending three cattle to the butcher shop this week, and they will be ready next week.  These cattle have never been fed grain, they have not been given shots or hormones, and the pastures are not sprayed with herbicides.  This is good old fashioned pasture fed beef, and it is delicious!!!",
+    "name": "Beef package 10 lbs",
     "starrating": 5,
     "price": "100" ,
     "unit": "10 lb",
     "img": "beef.jpg",
-    "stripeLink": "https://buy.stripe.com/test_aEUeVZdHa0V08y4dQQ"
+    "stripeLinkWithOutShipping": "https://buy.stripe.com/test_aEUeVZdHa0V08y4dQQ",
+    "stripeLinkWithShipping": "https://buy.stripe.com/test_dR68xB7iMgTYcOkaEF",
+    "shipping":"$17"
   },
   {
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e35",
-    "description": "An assortment of ground beef and special cuts",
-    "name": "15 lbs assorted beef",
+    "description": "Farm Boy Beef, every day the boys give the cattle a fresh slice of pasture.  When they approach the fence, the cattle are waiting impatiently; they know what’s coming!  The new pasture is fenced off, and when the gate opens, they swoop in for a fresh salad lunch.It has taken a while to get to the point where we have not only produced enough beef to feed 20 hungry boys, but also sell to customers.  There are soil samples to collect, hay to cut and bale, fences to put in, and weeds to cut out of the pasture.  All his activity provides hours of meaningful work for the boys, food for their table, and financial support for their school. We are now ready for our first offering:  organic, grass fed and grass finished beef!  We are sending three cattle to the butcher shop this week, and they will be ready next week.  These cattle have never been fed grain, they have not been given shots or hormones, and the pastures are not sprayed with herbicides.  This is good old fashioned pasture fed beef, and it is delicious!!!",
+    "name": "Beef package 15 lbs",
     "starrating": 5,
     "price": "150" ,
     "unit": "15 lb",
     "img": "beef.jpg",
-    "stripeLink": "https://buy.stripe.com/test_aEUeVZdHa0V08y4dQQ"
+    "stripeLinkWithOutShipping": "https://buy.stripe.com/test_9AQ3dhcD68ns29GaEH",
+    "stripeLinkWithShipping": "https://buy.stripe.com/test_14k015eLe5bg3dKaEG",
+    "shipping":"$17"
   },
   {
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e36",
-    "description": "An assortment of ground beef and special cuts",
-    "name": "20 lbs assorted beef",
+    "description": "Farm Boy Beef, every day the boys give the cattle a fresh slice of pasture.  When they approach the fence, the cattle are waiting impatiently; they know what’s coming!  The new pasture is fenced off, and when the gate opens, they swoop in for a fresh salad lunch.It has taken a while to get to the point where we have not only produced enough beef to feed 20 hungry boys, but also sell to customers.  There are soil samples to collect, hay to cut and bale, fences to put in, and weeds to cut out of the pasture.  All his activity provides hours of meaningful work for the boys, food for their table, and financial support for their school. We are now ready for our first offering:  organic, grass fed and grass finished beef!  We are sending three cattle to the butcher shop this week, and they will be ready next week.  These cattle have never been fed grain, they have not been given shots or hormones, and the pastures are not sprayed with herbicides.  This is good old fashioned pasture fed beef, and it is delicious!!!",
+    "name": "Beef package 20 lbs",
     "starrating": 5,
     "price": "200" ,
     "unit": "20 lb",
     "img": "beef.jpg",
-    "stripeLink": "https://buy.stripe.com/test_aEUeVZdHa0V08y4dQQ"
+    "stripeLinkWithOutShipping": "https://buy.stripe.com/test_aEUaFJauY0V0g0w9AF",
+    "stripeLinkWithShipping": "https://buy.stripe.com/test_28obJN9qUavAcOk7sw",
+    "shipping":"$17"
+
   }
 ]
