@@ -16,6 +16,10 @@
                  <li>
                  <nuxt-link to="/newsletter">Newsletter</nuxt-link>
                 </li>
+                        <li>
+          <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
+          <nuxt-link to="/cart">Cart</nuxt-link>
+        </li>
        <!-- <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
           <nuxt-link to="/cart">Cart</nuxt-link>

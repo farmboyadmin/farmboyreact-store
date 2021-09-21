@@ -7,24 +7,12 @@
       <section class="product-info">
         <h2>{{ product.name }} {{ product.shortDescription }}</h2>
         <h4 class="price">{{ product.unit }} @ {{ product.price | dollar }}  </h4>
-        <div class="product-options">
-          <div class="quantity">
-            <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
-            <input type="number" v-model="quantity" />
-            <button class="update-num" @click="quantity++">+</button>
-          </div>
-          <div v-if="product.sizes" class="size">
-            <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
-              <option :value="null" disabled hidden>Size</option>
-              <option v-for="(size, key) in product.sizes" :key="key" :value="size">{{ size }}</option>
-            </select>
-          </div>
-        </div>
-        <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
-
-        <p>
-          <button class="button purchase" @click="cartAdd">Add to Cart</button>
-        </p>
+       
+        <p>{{ product.description }}</p>
+        <p>Order 
+     <a :href="product.stripeLinkWithOutShipping">here</a> to pick up at the farm
+      </p> 
+      <p>Order  <a :href="product.stripeLinkWithShipping">here</a> to be delivered for an additional {{product.shipping}} shipping </p>
       </section>
     </section>
     <hr />
@@ -39,8 +27,6 @@ import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
   components: {
-    StarRating,
-    AppFeaturedProducts
   },
   data() {
     return {

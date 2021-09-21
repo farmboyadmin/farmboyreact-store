@@ -5,7 +5,8 @@ export const state = () => ({
   cartUIStatus: "idle",
   storedata: data,
   cart: [],
-  clientSecret: "" // Required to initiate the payment from the client
+  clientSecret: "" ,// Required to initiate the payment from the client,
+  deliveryAmount:0
 });
 
 export const getters = {
@@ -18,14 +19,15 @@ export const getters = {
   },
   cartTotal: state => {
     if (!state.cart.length) return 0;
-    return state.cart.reduce((ac, next) => ac + next.quantity * next.price, 0);
-  },
+    return state.cart.reduce((ac, next) => ac + next.quantity * next.price, 0)+state.deliveryAmount;
+  }
+  ,
   cartItems: state => {
     if (!state.cart.length) return [];
     return state.cart.map(item => {
       return {
         id: item.id,
-        quantity: item.quantity
+        quantity: item.quantityz
       };
     });
   },
@@ -61,7 +63,13 @@ export const mutations = {
   },
   removeAllFromCart: (state, payload) => {
     state.cart = state.cart.filter(el => el.id !== payload.id)
-  }
+  },
+  selectDelivery: (state) => {
+    state.deliveryAmount=17;
+    },
+    noDelivery: (state) => {
+      state.deliveryAmount=0;
+      }
 };
 
 export const actions = {
