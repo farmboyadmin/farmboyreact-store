@@ -1,29 +1,16 @@
 {
-  "name": "farmboy-industries",
-  "version": "1.0.0",
-  "description": "Products for purchase available",
-  "author": "davidsam",
-  "private": true,
+  "name": "checkout-netlify-serverless",
+  "version": "0.0.1",
+  "main": "index.js",
+  "contributors": [
+    "Jason Lengstorf <jason@lengstorf.com>",
+    "Thor 雷神 <thorsten@stripe.com>"
+  ],
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "functions": "cd functions && npm i && cd ..",
+    "dev": "netlify dev",
+    "webhook": "stripe listen --forward-to localhost:8888/.netlify/functions/handle-purchase"
   },
-  "dependencies": {
-    "axios": "^0.21.4",
-    "dotenv": "^8.0.0",
-    "gsap": "^2.1.3",
-    "node-sass": "^4.13.1",
-    "normalize.css": "^8.0.1",
-    "nuxt": "^2.0.0",
-    "sass-loader": "^7.1.0",
-    "stripe": "^7.4.0",
-    "uuid": "^3.3.2",
-    "vue-star-rating": "^1.6.1",
-    "vue-stripe-elements-plus": "^0.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
-  }
+  "license": "MIT",
+  "dependencies": {}
 }
