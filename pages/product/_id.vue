@@ -54,7 +54,7 @@
           <input type="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
         </div>
           </td>
-          </tr><tr class="total"><td >Total : </td><td>{{total}}</td></tr>
+          </tr><tr class="total"><td >Total : </td><td>${{total}}</td></tr>
           </table>
   
         </div>
@@ -161,7 +161,7 @@ select {
   margin-left: 0px;
 }
 .total {
-  color: rgb(209, 128, 128);
+  color: rgb(185, 66, 66);
   font-size: 20px;
 }
 
@@ -177,6 +177,9 @@ select {
 
 .quantity {
   display: flex;
+    font-size: 15px;
+      outline-offset: 1px;
+
 }
 
 .size-required-message {
