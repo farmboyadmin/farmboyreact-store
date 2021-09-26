@@ -20,11 +20,10 @@ section {
 }
 
 ul {
-  list-style: none;
-    align-items: center;
+        align-items: center;
+        list-style: none;
         padding-left: 20vw;
-                padding-right: 20vw;
-                width: 120vmin;
+        padding-right: 20vw;
     
 }
 
@@ -35,6 +34,8 @@ input {
 @media screen and (min-width: 850px) {
   section {
     padding: 20px !important;
+     display: flex;
+  justify-content: center;
   }
 }
 

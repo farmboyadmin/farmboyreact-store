@@ -7,8 +7,6 @@
       <div class="item" v-for="product in featuredProducts" :key="product.id">
         <img :src="`/products/${product.img}`" class="responsive" />
         <h3>{{ product.name }}</h3>
-        <h4>{{ product.price | dollar}} </h4>
-        <h4>{{ product.unit }} </h4>
         <NuxtLink :to="`/product/${product.id}`">
           <button class="multi-item">View Item ></button>
         </NuxtLink>
@@ -100,8 +98,6 @@ h2 span:after {
 @media screen and (min-width: 700px) {
   .featureditems {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 0px;
     div {

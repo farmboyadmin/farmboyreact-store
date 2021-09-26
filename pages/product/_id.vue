@@ -5,30 +5,66 @@
         <img :src="`/products/${product.img}`" />
       </section>
       <section class="product-info">
-        <h2>{{ product.name }} {{ product.shortDescription }}</h2>
-        <h4 class="price">{{ product.unit }} @ {{ product.price | dollar }}  </h4>
+        <h2>{{ product.name }}</h2>
+        <h3>{{ product.shortDescription }}</h3>
         <div class="product-options">
-          <div class="quantity">
-            <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
-            <input type="number" v-model="quantity" />
-            <button class="update-num" @click="quantity++">+</button>
-          </div>
-          <div v-if="product.sizes" class="size">
+          <table>
+          <tr><td>Packages</td>
+           <td><div v-if="product.packages" class="size">
             <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
-              <option :value="null" disabled hidden>Size</option>
-              <option v-for="(size, key) in product.sizes" :key="key" :value="size">{{ size }}</option>
+              <option :value="null" disabled hidden>Select a package</option>
+              <option v-for="item in product.packages" v-bind:key="item.package" :value="item.price"> {{ item.package }} {{product.unit}} for {{product.currency}}{{ item.price }}</option>
+
             </select>
           </div>
-        </div>
-        <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+          <p>Quantity</p></td><td>
+          <div class="quantity">
+            <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0" >-</button>
+            <input type="number" v-model="quantity" :max="10" />
+            <button class="update-num" @click="quantity <10 ? quantity++ : 10">+</button>
+          </div>
+          </td>
+          </tr>
+                  <tr>
+           <td>
+          <p>Delivery for $17</p></td><td>
+          <div  >
+            <input type="radio" name="delivery" v-bind:value="product.shipping" v-model="delivery"/>
+          </div>
+          </td></tr><tr>        <td>
+          <p>Pick up at Hope Farm</p></td><td>
+            <input type="radio"  name="delivery" value="0" v-model="delivery"/>
+          </td>
+          </tr>
+          <tr>        <td>
+          Additional donation to Hope Farm</td><td>
+                   <div  >
+          <input type="radio" name="additionalamount" id="additionalamount" value="0" v-model="additionalamountdiv"> 0%
+          <br>
+          <input type="radio" name="additionalamount" id="additionalamount" value="10" v-model="additionalamountdiv"> 10%
+          <br>
 
+          <input type="radio" name="additionalamount" id="additionalamount" value="20" v-model="additionalamountdiv"> 20%
+          <br>
+
+          <input type="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
+        </div>
+          </td>
+          </tr><tr class="total"><td >Total : </td><td>{{total}}</td></tr>
+          </table>
+  
+        </div>
+        <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a package</p>
         <p>
-          <button class="button purchase" @click="cartAdd">Add to Cart</button>
+          <button class="button purchase" @click="order">Place Order</button>
         </p>
       </section>
     </section>
     <hr />
-    <app-featured-products />
   </div>
 </template>
 
@@ -47,7 +83,10 @@ export default {
       id: this.$route.params.id,
       quantity: 1,
       size: null,
+      delivery: null,
       showSizeRequiredMessage: false,
+      additionalamountdiv: 0,
+      total:0,
       tempcart: [] // this object should be the same as the json store object, with additional params, quantity and size
     };
   },
@@ -57,9 +96,19 @@ export default {
       return this.storedata.find(el => el.id === this.id);
     }
   },
+    watch: {
+    '$data': {
+      handler: function(item) {
+        var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
+        var total = Number(item.quantity*item.size) + additionalCalculatedAmount + Number(item.delivery);
+        this.total = total;
+      },
+      deep: true
+    }
+  },
   methods: {
-    cartAdd() {
-      if (this.product.sizes && !this.size) {
+    order() {
+      if (this.product.packages && !this.size) {
         this.showSizeRequiredMessage = true;
         return;
       }
@@ -68,10 +117,16 @@ export default {
       item = { 
         ...item, 
         quantity: this.quantity, 
-        size: this.size 
+        size: this.size ,
+        delivery: this.delivery,
+         additionalamountdiv: this.additionalamountdiv
       };
-      this.tempcart.push(item);
-      this.$store.commit("addToCart", {...item});
+
+      var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
+      var total = Number(item.quantity*item.size) + additionalCalculatedAmount + Number(item.delivery);
+
+      alert("Total = "+ total )
+
     }
   }
 };
@@ -86,14 +141,10 @@ export default {
   grid-template-columns: 1fr 2fr;
 }
 
-.product-options {
-  display: flex;
-}
-
 input,
 select {
   width: 60px;
-  font-size: 25px;
+  font-size: 15px;
   margin: 0 5px;
   padding: 5px 10px;
 }
@@ -102,22 +153,26 @@ select {
   background: black;
   border-color: black;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   width: 45px;
 }
 
 .size {
-  margin-left: 10px;
+  margin-left: 0px;
+}
+.total {
+  color: rgb(209, 128, 128);
+  font-size: 20px;
 }
 
 .size-picker {
-  width: 130px;
-  font-size: 20px;
+  width: 150px;
+  font-size: 15px;
   height: 100%;
   border: 0;
   background-color: white;
   outline: 1px solid #ccc;
-  outline-offset: -1px;
+  outline-offset: 1px;
 }
 
 .quantity {
