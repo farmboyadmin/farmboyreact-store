@@ -107,7 +107,7 @@ export default {
     }
   },
   methods: {
-    order() {
+   async order() {
       if (this.product.packages && !this.size) {
         this.showSizeRequiredMessage = true;
         return;
@@ -119,13 +119,41 @@ export default {
         quantity: this.quantity, 
         size: this.size ,
         delivery: this.delivery,
-         additionalamountdiv: this.additionalamountdiv
+        additionalamountdiv: this.additionalamountdiv
       };
 
       var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
       var total = Number(item.quantity*item.size) + additionalCalculatedAmount + Number(item.delivery);
+      var packageDetails =  item.size+" lb "+ " quantity  "+item.quantity +" with delivery "+item.delivery;
 
-      alert("Total = "+ total )
+      const data = {
+        sku: item.id,
+        quantity: item.quantity,
+        total: total*100,
+        package:packageDetails,
+        shipping:item.delivery,
+         name:item.name
+      };
+
+      const response = await fetch('/.netlify/functions/create-checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+
+      const stripe = Stripe(response.publishableKey);
+      const { error } = await stripe.redirectToCheckout({
+        sessionId: response.sessionId,
+      });
+
+      if (error) {
+        document
+          .querySelectorAll('button')
+          .forEach((button) => (button.disabled = false));
+        console.error(error);
+      }
 
     }
   }

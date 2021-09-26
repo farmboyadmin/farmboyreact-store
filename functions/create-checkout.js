@@ -19,15 +19,15 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
  * The important thing is that the product info is loaded from somewhere trusted
  * so you know the pricing information is accurate.
  */
-const inventory = require('./data/products.json');
+const inventory = require('../static/storedata.json');
 
 exports.handler = async (event) => {
-  const { sku, quantity,total ,package,shipping} = JSON.parse(event.body);
-  const product = inventory.find((p) => p.sku === sku);
+  const { sku, quantity,total ,package,shipping,name} = JSON.parse(event.body);
+  const product = inventory.find((p) => p.id === sku);
 
   // ensure that the quantity is within the allowed range
   const validatedQuantity = quantity > 0 && quantity < 11 ? quantity : 1;
-  if(shipping==true){
+  if(shipping>0){
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
@@ -49,7 +49,7 @@ exports.handler = async (event) => {
             currency: 'usd',
             unit_amount: total,
             product_data: {
-              name: product.name,
+              name: name,
               description: package,
               images: [product.image],
             },
@@ -100,7 +100,7 @@ exports.handler = async (event) => {
             currency: 'usd',
             unit_amount: total,
             product_data: {
-              name: product.name,
+              name: name,
               description: package,
               images: [product.image],
             },
