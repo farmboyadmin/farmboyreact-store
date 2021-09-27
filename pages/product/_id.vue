@@ -23,7 +23,7 @@
             <td>
           <p>Quantity</p></td><td>
           <div class="quantity">
-            <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0" >-</button>
+            <button class="update-num" @click="quantity > 1 ? quantity-- : quantity = 1" >-</button>
             <input type="number" v-model="quantity" :max="10" />
             <button class="update-num" @click="quantity <10 ? quantity++ : 10">+</button>
           </div>
@@ -37,12 +37,12 @@
           </div>
           </td></tr><tr>        <td>
           <p>Pick up at Hope Farm</p></td><td>
-            <input type="radio"  name="delivery" value="0" v-model="delivery"/>
+            <input type="radio"  name="delivery" v-bind:value="0"  v-model="delivery" />
           </td>
           </tr>
           <tr>        <td>
           Additional donation to Hope Farm</td><td>
-                   <div  >
+                   <div  >  
           <input type="radio" name="additionalamount" id="additionalamount" value="0" v-model="additionalamountdiv"> 0%
           <br>
           <input type="radio" name="additionalamount" id="additionalamount" value="10" v-model="additionalamountdiv"> 10%
@@ -84,7 +84,7 @@ export default {
       id: this.$route.params.id,
       quantity: 1,
       size: null,
-      delivery: null,
+      delivery: 0,
       showSizeRequiredMessage: false,
       additionalamountdiv: 0,
       total:0,
@@ -125,7 +125,18 @@ export default {
 
       var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
       var total = Number(item.quantity*item.size) + additionalCalculatedAmount + Number(item.delivery);
-      var packageDetails =  item.size+" lb "+ " quantity  "+item.quantity +" with delivery "+item.delivery;
+      var packageDetails =  item.size+" lb "+ "  "+item.quantity+" packages for " ;
+      if(item.delivery==0){
+        packageDetails =packageDetails +" pick up at the farm  ";
+      }else {
+        packageDetails =packageDetails +" delivery fee $17  ";
+      }
+
+      if(item.additionalamountdiv==0){
+        packageDetails =packageDetails;
+      }else {
+        packageDetails =packageDetails +" and addition Hope Farm donation of $" + additionalCalculatedAmount +"( "+item.additionalamountdiv +"% of "+Number(item.quantity * item.size)+")";
+      }
 
       const data = {
         sku: item.id,
@@ -133,7 +144,7 @@ export default {
         total: total*100,
         package:packageDetails,
         shipping:item.delivery,
-         name:item.name
+        name:item.name
       };
 
       const response = await fetch('/.netlify/functions/create-checkout', {
