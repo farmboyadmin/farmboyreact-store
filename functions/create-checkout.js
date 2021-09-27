@@ -4,8 +4,8 @@
  *
  * @see https://stripe.com/docs/payments/checkout/one-time
  */
-require("dotenv").config();
 console.log(process.env.STRIPE_SECRET_KEY);
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2020-03-02',
   maxNetworkRetries: 2,
@@ -100,7 +100,7 @@ exports.handler = async (event) => {
             currency: 'usd',
             unit_amount: total,
             product_data: {
-              name: name,
+              name: product.name,
               description: package,
               images: [product.image],
             },

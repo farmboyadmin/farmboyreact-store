@@ -8,18 +8,22 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "postinstall": "netlify-lambda install"
+
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.7",
     "axios": "^0.21.4",
+    "child_process": "^1.0.2",
     "dotenv": "^8.0.0",
     "gsap": "^2.1.3",
+    "netlify-lambda": "^2.0.14",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.8",
     "sass-loader": "^7.1.0",
-    "stripe": "^7.4.0",
+    "stripe": "^7.63.1",
     "uuid": "^3.3.2",
     "vue-star-rating": "^1.6.1",
     "vue-stripe-elements-plus": "^0.3.2"

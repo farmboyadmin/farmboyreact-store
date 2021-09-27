@@ -73,6 +73,7 @@ import { mapState } from "vuex";
 import StarRating from "vue-star-rating/src/star-rating.vue";
 import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
+
 export default {
   components: {
     StarRating,
