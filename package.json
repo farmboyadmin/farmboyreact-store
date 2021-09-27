@@ -8,9 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "postinstall": "netlify-lambda install"
-
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.7",
