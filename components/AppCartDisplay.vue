@@ -108,6 +108,7 @@ export default {
   float: left;
   margin-right: 15px;
   width: 100px;
+  display: flex;
 }
 
 .total {

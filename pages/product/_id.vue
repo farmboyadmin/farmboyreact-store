@@ -1,8 +1,8 @@
 <template>
   <div>
     <section class="item-contain">
-      <section class="img">
-        <img :src="`/products/${product.img}`" />
+      <section class="product-img" >
+        <img :src="`/products/${product.img}`"  />
       </section>
       <section class="product-info">
         <h2>{{ product.name }}</h2>
@@ -12,7 +12,7 @@
           <tr><td>Packages</td>
            <td><div v-if="product.packages" class="size">
             <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
-              <option :value="null" disabled hidden>Select a package</option>
+              <option :value="null" disabled hidden >Select a package</option>
               <option v-for="item in product.packages" v-bind:key="item.package" :value="item.price"> {{ item.package }} {{product.unit}} for {{product.currency}}{{ item.price }}</option>
 
             </select>
@@ -54,7 +54,8 @@
           <input type="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
         </div>
           </td>
-          </tr><tr class="total"><td >Total : </td><td>${{total}}</td></tr>
+          </tr><tr class="total"><td >Total : </td><td>              <strong>{{ total  | dollar }}</strong>
+</td></tr>
           </table>
   
         </div>

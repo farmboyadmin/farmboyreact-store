@@ -3,7 +3,7 @@
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e34",
     "description": "",
     "name": "Farm Boy Beef",
-    "shortDescription":"(an assortment of ground beef and special cuts) available in 100 lb , 150 lb and 200 lb packages",
+    "shortDescription":"An assortment of ground beef and special cuts available in 10lb, 15lb and 20lb packages",
     "starrating": 5,
     "price": "100" ,
     "unit": "lb",
@@ -13,9 +13,9 @@
     "shipping":"17",
     "currency": "$",
     "packages": [
-      {"package":"100","price":"100"},
-      {"package":"150","price":"150"},
-      {"package":"200","price":"200"}
+      {"package":"10","price":"100"},
+      {"package":"15","price":"150"},
+      {"package":"20","price":"200"}
     ]
   }
 ]

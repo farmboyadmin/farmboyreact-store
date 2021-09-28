@@ -65,7 +65,8 @@ exports.handler = async (event) => {
         items: JSON.stringify([
           {
             sku: product.sku,
-            name: product.name,
+            name: name,
+            description: package,
             quantity: 1,
           },
         ]),
@@ -92,7 +93,7 @@ exports.handler = async (event) => {
        * other environment variables Netlify exposes:
        * https://docs.netlify.com/configure-builds/environment-variables/
        */
-      success_url: `${process.env.URL}/success.html`,
+      success_url: `${process.env.URL}/paymentsuccess`,
       cancel_url: process.env.URL,
       line_items: [
         {
@@ -100,7 +101,7 @@ exports.handler = async (event) => {
             currency: 'usd',
             unit_amount: total,
             product_data: {
-              name: product.name,
+              name: name,
               description: package,
               images: [product.image],
             },
@@ -116,7 +117,8 @@ exports.handler = async (event) => {
         items: JSON.stringify([
           {
             sku: product.sku,
-            name: product.name,
+            name: name,
+            description: package,
             quantity: 1,
           },
         ]),
