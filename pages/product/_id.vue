@@ -54,14 +54,16 @@
           <input type="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
         </div>
           </td>
-          </tr><tr class="total"><strong><td >Total : </td><td> {{ total  | dollar }}
-</td></strong></tr>
+          </tr><tr class="total"><strong><td >Total : </td><td> {{ total  | dollar }}</td></strong></tr>
           </table>
   
         </div>
         <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a package</p>
+        <p v-if="quantity==0" class="size-required-message">Please choose a quantity</p>
+        <p v-if="quantity>10" class="size-required-message">Please choose quantity less than 11</p>
+        <p v-if="total>10000" class="size-required-message">The Checkout Session's total amount due must be no more than $10,000</p>
         <p>
-          <button class="button purchase" @click="order">Place Order</button>
+          <button class="button purchase" @click="order" >Place Order</button>
         </p>
       </section>
     </section>
@@ -90,6 +92,7 @@ export default {
       additionalamountdiv: 0,
       package: 0,
       total:0,
+      isDisabled:true,
       tempcart: [] // this object should be the same as the json store object, with additional params, quantity and size
     };
   },
