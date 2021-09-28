@@ -54,8 +54,8 @@
           <input type="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
         </div>
           </td>
-          </tr><tr class="total"><td >Total : </td><td>              <strong>{{ total  | dollar }}</strong>
-</td></tr>
+          </tr><tr class="total"><strong><td >Total : </td><td> {{ total  | dollar }}
+</td></strong></tr>
           </table>
   
         </div>
@@ -203,6 +203,7 @@ select {
 }
 .total {
   font-size: 20px;
+  
 }
 
 .size-picker {
