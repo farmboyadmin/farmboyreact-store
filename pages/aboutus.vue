@@ -19,7 +19,7 @@ export default {
 <style>
 
   body {
-    font-family: Verdana  ;
+    font-family: proxima-nova  ;
     background-color: #fff;
       }
   label {

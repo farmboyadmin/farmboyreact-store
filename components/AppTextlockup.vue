@@ -26,7 +26,7 @@ export default {};
     text-align: left;
     width: 80vw;
     height: 10vw;
-    font-family: Verdana  ;
+    font-family: proxima-nova  ;
   }
 }
 
