@@ -202,7 +202,6 @@ select {
   margin-left: 0px;
 }
 .total {
-  color: rgb(185, 66, 66);
   font-size: 20px;
 }
 
