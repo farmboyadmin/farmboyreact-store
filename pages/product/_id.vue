@@ -24,7 +24,7 @@
           <p>Quantity</p></td><td>
           <div class="quantity">
             <button class="update-num" @click="quantity > 1 ? quantity-- : quantity = 1" >-</button>
-            <input type="number" v-model="quantity" :max="10" />
+            <input type="number" v-model="quantity" :max="10" :min="1" />
             <button class="update-num" @click="quantity <10 ? quantity++ : 10">+</button>
           </div>
           </td>
@@ -88,6 +88,7 @@ export default {
       delivery: 0,
       showSizeRequiredMessage: false,
       additionalamountdiv: 0,
+      package: 0,
       total:0,
       tempcart: [] // this object should be the same as the json store object, with additional params, quantity and size
     };
@@ -121,12 +122,13 @@ export default {
         quantity: this.quantity, 
         size: this.size ,
         delivery: this.delivery,
-        additionalamountdiv: this.additionalamountdiv
+        additionalamountdiv: this.additionalamountdiv,
+        package:this.package
       };
 
       var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
       var total = Number(item.quantity*item.size) + additionalCalculatedAmount + Number(item.delivery);
-      var packageDetails =  item.size+" lb "+ "  "+item.quantity+" packages for " ;
+      var packageDetails =  Number(item.size) / 10  + " lb "+ "  "+item.quantity+" packages for " ;
       if(item.delivery==0){
         packageDetails =packageDetails +" pick up at the farm  ";
       }else {
@@ -205,7 +207,13 @@ select {
   font-size: 20px;
   
 }
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 .size-picker {
   width: 150px;
   font-size: 15px;
