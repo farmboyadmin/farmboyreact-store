@@ -45,6 +45,7 @@ input {
 .container {
   padding: 20px;
   background-color: #f1f1f1;
+  width: 50vmin;
 }
 
 /* Style the input elements and the submit button */

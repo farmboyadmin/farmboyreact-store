@@ -48,7 +48,7 @@ input {
   background-color: #f1f1f1;
   resize: both;
   overflow: auto;
-  width: 100vmin;
+  width: 50vmin;
 }
 
 /* Style the input elements and the submit button */
