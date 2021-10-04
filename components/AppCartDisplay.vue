@@ -105,10 +105,10 @@ export default {
 
 <style lang="scss" scoped>
 .product-img {
-  float: left;
-  margin-right: 15px;
-  width: 100px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .total {

@@ -1,8 +1,8 @@
 <template>
   <div>
     <section class="item-contain">
-      <section class="product-img" >
-        <img :src="`/products/${product.img}`"  />
+      <section  >
+                <img :src="`/products/${product.img}`"  />
       </section>
       <section class="product-info">
         <h2>{{ product.name }}</h2>
@@ -186,7 +186,13 @@ export default {
   justify-content: space-around;
   grid-template-columns: 1fr 2fr;
 }
+.product-info {
+  margin-left:2vmin;
+    margin-right:2vmin;
+  margin-top:2vmin;
 
+  justify-content: space-around;
+}
 input,
 select {
   width: 60px;
@@ -210,6 +216,14 @@ select {
   font-size: 20px;
   
 }
+img {
+  margin-top: 5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -241,6 +255,7 @@ input[type=number]::-webkit-outer-spin-button {
 @media screen and (max-width: 650px) {
   .img img {
     width: 100%;
+    align-items: center;
   }
 
   .item-contain {
