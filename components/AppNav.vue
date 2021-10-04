@@ -1,7 +1,7 @@
 <template>
   <header>
     <link rel="shortcut icon" type="image/png" href="/static/farmboylogo.png"/>
-    <logo></logo>
+        <img class="logo" src="/farmboylogo.png"  />
     <nav>
       <ul>
         <li>
@@ -39,7 +39,6 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 40px 40px 0;
 }
 
 nav {
@@ -71,16 +70,10 @@ nav {
     }
   }
  
-} logo {
-  width: 50vw;
-  height: 35vh;
-  background-repeat: no-repeat;
-  background: url("/farmboylogo.png") center center no-repeat;
-  background-size: cover;
+} .logo {
+  max-width:50%;
+  height:auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .carttotal {
   position: absolute;
