@@ -57,7 +57,7 @@ nav {
       display: inline;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      font-size: 13px;
+      font-size: 1.25vw;
       padding: 0 20px;
       border-left: 1px solid #ddd;
       border-right: 1px solid #ddd;
