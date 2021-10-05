@@ -2,7 +2,6 @@
   <div>
     <section class="item-contain">
       <section  >
-                <img :src="`/products/${product.img}`"  />
       </section>
       <section class="product-info">
         <h2>{{ product.name }}</h2>
@@ -219,11 +218,6 @@ img {
   margin-top: 5vmin;
   max-width:100%;
   height:auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  color: white;
   }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -252,7 +246,11 @@ input[type=number]::-webkit-outer-spin-button {
 .size-required-message {
   color: red;
 }
-
+@media (max-width:629px) {
+  img#optionalstuff {
+    display: none;
+  }
+}
 @media screen and (max-width: 650px) {
   .img img {
     width: 100%;

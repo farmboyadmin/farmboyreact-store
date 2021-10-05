@@ -71,7 +71,8 @@ nav {
   }
  
 } .logo {
-  max-width:50%;
+  max-width:10%;
+  max-height:10%;
   height:auto;
   display: flex;
 }
