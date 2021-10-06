@@ -8,7 +8,7 @@
         <img :src="`/products/${product.img}`" class="responsive" />
         <h3>{{ product.name }}</h3>
         <NuxtLink :to="`/product/${product.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">Click Here ></button>
         </NuxtLink>
       </div>
     </div>
@@ -28,6 +28,13 @@ export default {
 <style lang="scss" scoped>
 section {
   margin-top: 20px;
+}
+
+button {
+  background: #a3daa7;
+  font-size: 40px;
+  border: none;
+
 }
 
 .featureditems {

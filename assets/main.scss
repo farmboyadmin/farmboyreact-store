@@ -68,13 +68,12 @@ button {
 button.purchase {
   background: $brandprimary;
   color: white;
-  font-size: 16px;
+  font-size: 40px;
   border: none;
   &:hover {
-    background: #c14103;
+    background: #a3daa7;
   }
 }
-
 button.pay-with-stripe {
   background: black;
   color: white;

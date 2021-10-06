@@ -7,11 +7,11 @@
         <h2>{{ product.name }}</h2>
         <h3>{{ product.shortDescription }}</h3>
         <div class="product-options">
-          <table>
+          <table >
           <tr><td>Packages</td>
            <td><div v-if="product.packages" class="size">
             <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
-              <option :value="null" disabled hidden >Select a package</option>
+              <option :value="null" disabled hidden >Select</option>
               <option v-for="item in product.packages" v-bind:key="item.package" :value="item.price"> {{ item.package }} {{product.unit}} for {{product.currency}}{{ item.price }}</option>
 
             </select>
@@ -23,7 +23,7 @@
           <p>Quantity</p></td><td>
           <div class="quantity">
             <button class="update-num" @click="quantity > 1 ? quantity-- : quantity = 1" >-</button>
-            <input type="number" v-model="quantity" :max="10" :min="1" />
+            <input type="number" class="quantitynumber" v-model="quantity" :max="10" :min="1" />
             <button class="update-num" @click="quantity <10 ? quantity++ : 10">+</button>
           </div>
           </td>
@@ -32,25 +32,25 @@
            <td>
           <p>Delivery for $17</p></td><td>
           <div  >
-            <input type="radio" name="delivery" v-bind:value="product.shipping" v-model="delivery"/>
+            <input type="radio" class="radio" name="delivery" v-bind:value="product.shipping" v-model="delivery"/>
           </div>
           </td></tr><tr>        <td>
-          <p>Pick up at Hope Farm</p></td><td>
-            <input type="radio"  name="delivery" v-bind:value="0"  v-model="delivery" />
+          <p>Pick up at Hope Farm School $0</p></td><td>
+            <input type="radio" class="radio"  name="delivery" v-bind:value="0"  v-model="delivery" />
           </td>
           </tr>
           <tr>        <td>
-          Additional donation to Hope Farm</td><td>
+          Additional donation to <br> Hope Farm School</td><td>
                    <div  >  
-          <input type="radio" name="additionalamount" id="additionalamount" value="0" v-model="additionalamountdiv"> 0%
+          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="0" v-model="additionalamountdiv"> 0%
           <br>
-          <input type="radio" name="additionalamount" id="additionalamount" value="10" v-model="additionalamountdiv"> 10%
-          <br>
-
-          <input type="radio" name="additionalamount" id="additionalamount" value="20" v-model="additionalamountdiv"> 20%
+          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="10" v-model="additionalamountdiv"> 10%
           <br>
 
-          <input type="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
+          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="20" v-model="additionalamountdiv"> 20%
+          <br>
+
+          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
         </div>
           </td>
           </tr><tr class="total"><strong><td >Total : </td><td> {{ total  | dollar }}</td></strong></tr>
@@ -80,6 +80,15 @@ export default {
   components: {
     StarRating,
     AppFeaturedProducts
+  },
+    data: {
+      delivery: 0,
+  },
+    mounted() {
+    // enable after slight delay for the user:
+    setTimeout(() => {
+      this.delivery = '0';
+    }, 200);
   },
   data() {
     return {
@@ -178,6 +187,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.radio {
+    border: 0px;
+    height: 2em;
+    font-size: 10vm;
+}
 .item-contain {
   margin-left: 8%;
   width: 80%;
@@ -189,9 +204,36 @@ export default {
   margin-left:2vmin;
   margin-right:2vmin;
   margin-top:2vmin;
-  font-size:1.25vw;
+  font-size:1.5vw;
   justify-content: space-around;
+
+  
 }
+table {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgb(51, 32, 32);
+  font-size: 1em;
+
+}
+
+tr {
+  text-align: center;
+    border: 1px solid rgb(51, 32, 32);
+}
+
+th {
+  padding: 10px 0;
+}
+
+td {
+  border: 2px solid #ccc;
+  padding: 2vm;
+}
+th {
+  border: 1px solid #ccc;
+}
+
 input,
 select {
   width: 60px;
@@ -207,12 +249,16 @@ select {
   font-size: 15px;
   width: 45px;
 }
-
+.quantitynumber {
+    font-size: 20px;
+}
 .size {
   margin-left: 0px;
 }
 .total {
-  font-size:1.5vw;  
+  font-size:2vw;  
+    border: none;
+
 }
 img {
   margin-top: 5vmin;
@@ -228,18 +274,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .size-picker {
   width: 150px;
-  font-size: 15px;
+  font-size: 20px;
   height: 100%;
   border: 0;
   background-color: white;
-  outline: 1px solid #ccc;
-  outline-offset: 1px;
 }
 
 .quantity {
   display: flex;
-    font-size: 15px;
-      outline-offset: 1px;
+    font-size: 20px;
+    outline-offset: 1px;
 
 }
 

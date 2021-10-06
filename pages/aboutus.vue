@@ -26,5 +26,8 @@ export default {
     display: block;
     margin-bottom: .2em;
   }
+  p {
+  font-size: 20px;
+}
 
 </style>

@@ -10,7 +10,7 @@
         <h3>{{ item.name }}</h3>
         <h4 class="price">{{ item.price | dollar }}</h4>
         <NuxtLink :to="`product/${item.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">Click Here ></button>
         </NuxtLink>
       </div>
     </transition-group>
