@@ -8,7 +8,7 @@
         <h3>{{ product.shortDescription }}</h3>
         <div class="product-options">
           <table >
-          <tr><td>Packages</td>
+          <tr><td><p>Packages</p></td>
            <td><div v-if="product.packages" class="size">
             <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
               <option :value="null" disabled hidden >Select</option>
@@ -32,26 +32,21 @@
            <td>
           <p>Delivery for $17</p></td><td>
           <div  >
-            <input type="radio" class="radio" name="delivery" v-bind:value="product.shipping" v-model="delivery"/>
+            <input type="radio" class="radio1" name="delivery" v-bind:value="product.shipping" v-model="delivery"/>
           </div>
-          </td></tr><tr>        <td>
+          </td></tr><tr >        <td class="deliveryrow">
           <p>Pick up at Hope Farm School $0</p></td><td>
-            <input type="radio" class="radio"  name="delivery" v-bind:value="0"  v-model="delivery" />
+            <input type="radio" class="radio1"  name="delivery" v-bind:value="0"  v-model="delivery" />
           </td>
           </tr>
           <tr>        <td>
-          Additional donation to <br> Hope Farm School</td><td>
-                   <div  >  
-          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="0" v-model="additionalamountdiv"> 0%
-          <br>
-          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="10" v-model="additionalamountdiv"> 10%
-          <br>
-
-          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="20" v-model="additionalamountdiv"> 20%
-          <br>
-
-          <input type="radio" class="radio" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%</p>
-        </div>
+          <p>Additional donation to <br> Hope Farm School</p></td><td class="additionalamountrow">
+          <section class="additionalamountsection" >  
+          <input type="radio" class="radio2" name="additionalamount" id="additionalamount" value="0" v-model="additionalamountdiv"> 0%
+          <input type="radio" class="radio2" name="additionalamount" id="additionalamount" value="10" v-model="additionalamountdiv"> 10%
+          <input type="radio" class="radio2" name="additionalamount" id="additionalamount" value="20" v-model="additionalamountdiv"> 20%
+          <input type="radio" class="radio2" name="additionalamount" id="additionalamount" value="30" v-model="additionalamountdiv"> 30%
+        </section>
           </td>
           </tr><tr class="total"><strong><td >Total : </td><td> {{ total  | dollar }}</td></strong></tr>
           </table>
@@ -188,11 +183,24 @@ export default {
 
 <style lang="scss" scoped>
 
-.radio {
+.radio1 {
     border: 0px;
     height: 2em;
-    font-size: 10vm;
+    font-size: 15vm;
 }
+.radio2 {
+    border: 0px;
+    height: 2em;
+    font-size: 15vm;
+      justify-items: center;
+
+}
+
+td.deliveryrow {
+        justify-items: center;
+
+}
+
 .item-contain {
   margin-left: 8%;
   width: 80%;
@@ -200,45 +208,46 @@ export default {
   justify-content: space-around;
   grid-template-columns: 1fr 2fr;
 }
+.additionalamountsection {
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+     grid-gap: .5em;
+    padding: .5em; /* NEW */
+    justify-items: center;
+      font-size: 10vm;
+        padding-left: 0;
+
+}
 .product-info {
   margin-left:2vmin;
   margin-right:2vmin;
   margin-top:2vmin;
-  font-size:1.5vw;
+  font-size: 10vm;
   justify-content: space-around;
 
   
 }
-table {
+table ,tr,td{
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   border: 1px solid rgb(51, 32, 32);
-  font-size: 1em;
-
+  font-size:1.5vw;  
 }
 
-tr {
-  text-align: center;
-    border: 1px solid rgb(51, 32, 32);
+tr.total td {
+  border: 0;
+  font-size:2vw;  
 }
-
-th {
-  padding: 10px 0;
+p {
+  border: 0;
+  font-size:1.5vw;  
 }
-
-td {
-  border: 2px solid #ccc;
-  padding: 2vm;
-}
-th {
-  border: 1px solid #ccc;
-}
-
 input,
 select {
   width: 60px;
   font-size: 15px;
-  margin: 0 5px;
+  margin: 2 5px;
   padding: 5px 10px;
 }
 
@@ -257,8 +266,11 @@ select {
 }
 .total {
   font-size:2vw;  
-    border: none;
+  border: none;
 
+}
+.total tr {
+  color: unset;
 }
 img {
   margin-top: 5vmin;
@@ -278,6 +290,8 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100%;
   border: 0;
   background-color: white;
+  outline: 1px solid #ccc;
+
 }
 
 .quantity {
