@@ -1,8 +1,6 @@
 <template>
   <div>
     <section class="item-contain">
-      <section  >
-      </section>
       <section class="product-info">
         <h2>{{ product.name }}</h2>
         <h3>{{ product.shortDescription }}</h3>
@@ -202,11 +200,13 @@ td.deliveryrow {
 }
 
 .item-contain {
-  margin-left: 8%;
-  width: 80%;
-  display: grid;
-  justify-content: space-around;
-  grid-template-columns: 1fr 2fr;
+  width: 50%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-left:2vmin;
+  margin-right:2vmin;
 }
 .additionalamountsection {
     justify-content: space-around;
@@ -309,6 +309,21 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
   }
 }
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+table ,tr,td{
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid rgb(51, 32, 32);
+  font-size:1.5vw;  
+}
+
+tr.total td {
+  border: 0;
+  font-size:2vw;  
+}
+}
+
 @media screen and (max-width: 650px) {
   .img img {
     width: 100%;
@@ -324,5 +339,19 @@ input[type=number]::-webkit-outer-spin-button {
     width: 90%;
     margin-left: 4%;
   }
+p {
+  border: 0;
+  font-size:4vw;  
+}
+table ,tr,td{
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid rgb(51, 32, 32);
+  font-size:4vw;  
+}
+tr.total td {
+  border: 0;
+  font-size:4vw;  
+}
 }
 </style>
