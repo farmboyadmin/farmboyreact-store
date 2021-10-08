@@ -3,7 +3,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <ul>
       <a href="https://www.facebook.com/hopefarmschoolwis" class="fa fa-facebook"></a>
-      <a href="https://www.hopefarmschool.org" class="fa fa-twitter"></a>
       <a href="https://www.instagram.com/hopefarmschool/" class="fa fa-instagram"></a>
     </ul>
   </section>

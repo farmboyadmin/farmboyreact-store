@@ -290,8 +290,8 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100%;
   border: 0;
   background-color: white;
-  outline: 1px solid #ccc;
-
+  border: 1px solid var(--select-border); 
+  border-radius: 0.25em;
 }
 
 .quantity {
