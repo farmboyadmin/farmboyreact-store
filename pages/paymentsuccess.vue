@@ -1,7 +1,7 @@
 <template>
   <section>
-     <h1>Purchase successful!</h1>
-      <p>Thank you for supporting Hope Farm School </p>
+     <h1>Purchase successful!, order reciept sent to the email provided during checkout</h1>
+      <p>Thank you for supporting Hope Farm School, please reach out to Widdy at 612-710-2868 if you have any questions or concerns </p>
   </section>
 </template>
 
