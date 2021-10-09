@@ -28,7 +28,7 @@
           </tr>
                   <tr>
            <td>
-          <p>Delivery for $17</p> <p> Phone Number:</p></td><td>
+          <p>Delivery for $17</p></td><td>
           <div  >
             <input type="radio" class="radio1" name="delivery" v-bind:value="product.shipping" v-model="delivery"/><br>
           </div>
@@ -56,7 +56,7 @@
         <p v-if="quantity>10" class="size-required-message">Please choose quantity less than 11</p>
         <p v-if="total>10000" class="size-required-message">The Checkout Session's total amount due must be no more than $10,000</p>
         <p>
-        <button class="button purchase" @click="order" >Place Order</button>
+        <button class="button purchase" @click="order">Place Order</button>
         </p>
       </section>
     </section>
