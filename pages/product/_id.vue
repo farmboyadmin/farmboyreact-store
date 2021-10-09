@@ -31,7 +31,6 @@
           <p>Delivery for $17</p> <p> Phone Number:</p></td><td>
           <div  >
             <input type="radio" class="radio1" name="delivery" v-bind:value="product.shipping" v-model="delivery"/><br>
-            <input class="phonenumber"  v-model="phonenumber" type="textbox" @input="acceptNumber">
           </div>
           </td></tr><tr >        
           <td class="deliveryrow">
@@ -55,7 +54,6 @@
         <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a package</p>
         <p v-if="quantity==0" class="size-required-message">Please choose a quantity</p>
         <p v-if="quantity>10" class="size-required-message">Please choose quantity less than 11</p>
-        <p v-if="phonenumber=='###-###-####' && delivery>0" class="size-required-message">Please provide phone number for delivery</p>
         <p v-if="total>10000" class="size-required-message">The Checkout Session's total amount due must be no more than $10,000</p>
         <p>
         <button class="button purchase" @click="order" >Place Order</button>

@@ -41,6 +41,9 @@ exports.handler = async (event) => {
        * other environment variables Netlify exposes:
        * https://docs.netlify.com/configure-builds/environment-variables/
        */
+      phone_number_collection: {
+        enabled: true,
+      },
       success_url: `${process.env.URL}/paymentsuccess`,
       cancel_url: process.env.URL,
       line_items: [
@@ -110,6 +113,9 @@ exports.handler = async (event) => {
           quantity: 1,
         },
       ],
+      phone_number_collection: {
+        enabled: true,
+      },
       // We are using the metadata to track which items were purchased.
       // We can access this meatadata in our webhook handler to then handle
       // the fulfillment process.
