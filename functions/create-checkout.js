@@ -22,7 +22,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
 const inventory = require('../static/storedata.json');
 
 exports.handler = async (event) => {
-  const { sku, quantity,total ,package,shipping,name} = JSON.parse(event.body);
+  const { sku, quantity,total ,package,shipping,name,phonenumber} = JSON.parse(event.body);
   const product = inventory.find((p) => p.id === sku);
 
   // ensure that the quantity is within the allowed range
@@ -68,6 +68,7 @@ exports.handler = async (event) => {
             name: name,
             description: package,
             quantity: 1,
+            phonenumber:phonenumber
           },
         ]),
       },

@@ -28,11 +28,13 @@
           </tr>
                   <tr>
            <td>
-          <p>Delivery for $17</p></td><td>
+          <p>Delivery for $17</p> <p> Phone Number:</p></td><td>
           <div  >
-            <input type="radio" class="radio1" name="delivery" v-bind:value="product.shipping" v-model="delivery"/>
+            <input type="radio" class="radio1" name="delivery" v-bind:value="product.shipping" v-model="delivery"/><br>
+            <input class="phonenumber"  v-model="phonenumber" type="textbox" @input="acceptNumber">
           </div>
-          </td></tr><tr >        <td class="deliveryrow">
+          </td></tr><tr >        
+          <td class="deliveryrow">
           <p>Pick up at Hope Farm School $0</p></td><td>
             <input type="radio" class="radio1"  name="delivery" v-bind:value="0"  v-model="delivery" />
           </td>
@@ -53,6 +55,7 @@
         <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a package</p>
         <p v-if="quantity==0" class="size-required-message">Please choose a quantity</p>
         <p v-if="quantity>10" class="size-required-message">Please choose quantity less than 11</p>
+        <p v-if="phonenumber=='###-###-####' && delivery>0" class="size-required-message">Please provide phone number for delivery</p>
         <p v-if="total>10000" class="size-required-message">The Checkout Session's total amount due must be no more than $10,000</p>
         <p>
         <button class="button purchase" @click="order" >Place Order</button>
@@ -91,6 +94,7 @@ export default {
       delivery: 0,
       showSizeRequiredMessage: false,
       additionalamountdiv: 0,
+      phonenumber:"###-###-####",
       package: 0,
       total:0,
       isDisabled:true,
@@ -114,6 +118,11 @@ export default {
     }
   },
   methods: {
+      acceptNumber() {
+        var x = this.phonenumber.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+  this.phonenumber = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    }
+    ,
    async order() {
       if (this.product.packages && !this.size) {
         this.showSizeRequiredMessage = true;
@@ -127,7 +136,8 @@ export default {
         size: this.size ,
         delivery: this.delivery,
         additionalamountdiv: this.additionalamountdiv,
-        package:this.package
+        package:this.package,
+        phonenumber:this.phonenumber
       };
 
       var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
@@ -151,7 +161,8 @@ export default {
         total: total*100,
         package:packageDetails,
         shipping:item.delivery,
-        name:item.name
+        name:item.name,
+        phonenumber:item.phonenumber
       };
 
       const response = await fetch('/.netlify/functions/create-checkout', {
@@ -180,7 +191,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.phonenumber {
+    position: relative;
+    text-indent: 1ch;
+    width: 10em;
+    white-space: nowrap;
+}
 .radio1 {
     border: 0px;
     height: 2em;
