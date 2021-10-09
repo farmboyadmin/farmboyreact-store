@@ -108,7 +108,7 @@ h2 span:after {
     grid-column-gap: 10px;
     grid-row-gap: 0px;
     div {
-      padding: 40px 50px;
+      padding: 10px 20px;
     }
   }
 

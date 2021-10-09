@@ -150,7 +150,7 @@ export default {
       if(item.additionalamountdiv==0){
         packageDetails =packageDetails;
       }else {
-        packageDetails =packageDetails +" and addition Hope Farm donation of $" + additionalCalculatedAmount +"( "+item.additionalamountdiv +"% of "+Number(item.quantity * item.size)+")";
+        packageDetails =packageDetails +" and additional Hope Farm School donation of $" + additionalCalculatedAmount +"( "+item.additionalamountdiv +"% of "+Number(item.quantity * item.size)+")";
       }
 
       const data = {
