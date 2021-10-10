@@ -1,7 +1,8 @@
 <template>
   <section>
-     <h1>Purchase successful! Order reciept sent to the email provided during checkout</h1>
-      <p>Thank you for supporting Hope Farm School. Please reach out to Widdy at 612-710-2868 if you have any questions or concerns.</p>
+     <p>Purchase successful! Order reciept sent to the email provided during checkout.</p>
+      <p>You will recieve an email about the delivery date of the meat.</p>
+      <p>Thank you for supporting Hope Farm School. Please reach out to Widdy at 612-710-2868 if you have any questions or to arranger a time if you are picking up your meat.</p>
   </section>
 </template>
 
