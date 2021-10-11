@@ -28,7 +28,7 @@
           </tr>
                   <tr>
            <td>
-          <p>Delivery for $17</p></td><td>
+          <p>Delivery for $17 (twin cities only)</p></td><td>
           <div  >
             <input type="radio" class="radio1" name="delivery" v-bind:value="product.shipping" v-model="delivery"/><br>
           </div>
