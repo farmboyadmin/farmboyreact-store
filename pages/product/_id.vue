@@ -144,7 +144,7 @@ export default {
       if(item.delivery==0){
         packageDetails =packageDetails +" pick up at the farm  ";
       }else {
-        packageDetails =packageDetails +" delivery fee $17  ";
+        packageDetails =packageDetails +" delivery fee $17 (twin cities ONLY) ";
       }
 
       if(item.additionalamountdiv==0){
