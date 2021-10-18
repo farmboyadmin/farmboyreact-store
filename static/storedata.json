@@ -3,7 +3,7 @@
     "id": "9d436e98-1dc9-4f21-9587-76d4c0255e34",
     "description": "",
     "name": "Farm Boy Beef",
-    "shortDescription":"An assortment of ground beef and special cuts available in 10lb, 15lb and 20lb packages",
+    "shortDescription":"PREMIUM ground beef, a special blend that includes cuts from prime serloin, ground chuck and tenderloin. The result is an extrardinary burger that is high in flavour, tenderness and richness.",
     "starrating": 5,
     "price": "100" ,
     "unit": "lb",
@@ -13,9 +13,9 @@
     "shipping":"17",
     "currency": "$",
     "packages": [
-      {"package":"10","price":"100"},
-      {"package":"15","price":"150"},
-      {"package":"20","price":"200"}
+      {"package":"10","price":"70"},
+      {"package":"15","price":"105"},
+      {"package":"20","price":"140"}
     ]
   }
 ]
