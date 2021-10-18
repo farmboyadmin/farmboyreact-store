@@ -140,7 +140,7 @@ export default {
 
       var additionalCalculatedAmount=Number(item.quantity * item.size) * Number(item.additionalamountdiv) / 100;
       var total = Number(item.quantity*item.size) + additionalCalculatedAmount + Number(item.delivery);
-      var packageDetails =  Number(item.size) / 10  + " lb "+ "  "+item.quantity+" packages for " ;
+      var packageDetails =  Number(item.size) / 7  + " lb "+ "  "+item.quantity+" packages for " ;
       if(item.delivery==0){
         packageDetails =packageDetails +" pick up at the farm  ";
       }else {
