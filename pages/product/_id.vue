@@ -2,6 +2,7 @@
   <div>
     <section class="item-contain">
       <section class="product-info">
+         <h2>Sorry We are Sold out</h2>
         <h2>{{ product.name }}</h2>
         <h3>{{ product.shortDescription }}</h3>
         <div class="product-options">
@@ -56,7 +57,7 @@
         <p v-if="quantity>10" class="size-required-message">Please choose quantity less than 11</p>
         <p v-if="total>10000" class="size-required-message">The Checkout Session's total amount due must be no more than $10,000</p>
         <p>
-        <button class="button purchase" @click="order">Place Order</button>
+        <button :disabled='isDisabled' class="button purchase" @click="order">Place Order</button>
         </p>
       </section>
     </section>

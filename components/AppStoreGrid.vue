@@ -7,10 +7,11 @@
             <img :src="`/products/${item.img}`" />
           </NuxtLink>
         </div>
+                <h2>Sorry we are sold out</h2>
         <h3>{{ item.name }}</h3>
         <h4 class="price">{{ item.price | dollar }}</h4>
         <NuxtLink :to="`product/${item.id}`">
-          <button class="multi-item">Click Here ></button>
+          <button :disabled='isDisabled'  class="multi-item">Click Here ></button>
         </NuxtLink>
       </div>
     </transition-group>
